@@ -6,18 +6,16 @@ export default class SearchRecordForm extends React.Component {
 			return (<div></div>)
 		} else {
 			return (
-				<div>
+				<form name="search_form">
 					<div>Search Record</div>
-					<form name="search_form">
-						<div className="inputBox">
-							<label htmlFor="search">First name</label>
-							<input type="text" id="search" name="search" onKeyPress={(e) => this.props.onClick(e)}/>
-						</div>
-						<div className="inputBox">
-							<input type="button" onClick={(e) => this.props.onClick(e)} value="Search for by name"/>
-						</div>
-					</form>
-				</div>
+					<div className="inputBox">
+						<label htmlFor="search">First name</label>
+						<input type="text" id="search" name="search" onKeyPress={(e) => this.props.onClick(e)}/>
+					</div>
+					<div className="inputBox">
+						<input type="button" className="btn" onClick={(e) => this.props.onClick(e)} value="Search for by name"/>
+					</div>
+				</form>
 			)
 		}
 	}

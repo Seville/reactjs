@@ -45,7 +45,7 @@ export default class AddRecordForm extends React.Component {
 						<input type="text" id="zip" name="zip"/>
 					</div>
 					<div className="inputBox">
-						<input type="button" onClick={() => this.props.addRecord()} value="Add record"/>
+						<input type="button" className="btn" onClick={() => this.props.addRecord()} value="Add record"/>
 					</div>
 				</form>
 			)

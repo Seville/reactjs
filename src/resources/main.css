@@ -1,3 +1,46 @@
 /* Precompiled to main.css */
+body {
+  font-family: "Verdana"; }
+
+table {
+  border-spacing: 0;
+  border-radius: 3px;
+  border-left: 1px solid #a6d2a6;
+  border-right: 1px solid #a6d2a6;
+  border-bottom: 1px solid #a6d2a6;
+  margin-top: 10px; }
+  table tr th, table tr td {
+    border-bottom: 1px solid #a6d2a6;
+    padding: 10px; }
+  table tr th {
+    text-align: center; }
+  table tr td {
+    text-align: left; }
+  table tr:first-child {
+    background-color: #81bf81; }
+  table tr:nth-child(2n+3) {
+    background-color: #a6d2a6; }
+  table tr:last-child td {
+    border-bottom: none; }
+
+.btn {
+  border: none;
+  padding: 5px;
+  box-shadow: 2px 2px 5px #000;
+  width: 100px;
+  border-radius: 3px;
+  background: #4f7cf6;
+  color: #fff; }
+
+form {
+  border: 1px solid #a6d2a6;
+  padding: 10px;
+  margin-top: 10px;
+  width: 260px; }
+  form label {
+    display: block; }
+  form .inputBox {
+    margin-top: 10px;
+    margin-bottom: 10px; }
 
 /*# sourceMappingURL=main.css.map */

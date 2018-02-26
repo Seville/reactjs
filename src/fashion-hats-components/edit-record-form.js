@@ -47,7 +47,7 @@ export default class EditRecordForm extends React.Component {
 						</div>
 						<input type="hidden" id="accntId" name="accntId" defaultValue={this.props.selected.id}/>
 						<div className="inputBox">
-							<input type="button" onClick={(e) => this.props.updateRecord(e)} defaultValue="Update record"/>
+							<input type="button" className="btn" onClick={(e) => this.props.updateRecord(e)} defaultValue="Update record"/>
 						</div>
 					</form>
 				</div>

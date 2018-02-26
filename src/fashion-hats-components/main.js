@@ -176,9 +176,9 @@ export default class Main extends React.Component {
 		return (
 			<div>
 				<section>
-					<button onClick={() => this.showAll()}>Show all</button>&nbsp;
-					<button onClick={() => this.showAddForm()}>Add record</button>&nbsp;
-					<button onClick={() => this.showSearchForm()}>Search for record</button>
+					<button className="btn" onClick={() => this.showAll()}>Show all</button>&nbsp;
+					<button className="btn" onClick={() => this.showAddForm()}>Add record</button>&nbsp;
+					<button className="btn" onClick={() => this.showSearchForm()}>Search</button>
 				</section>
 				
 				<RestStatus 

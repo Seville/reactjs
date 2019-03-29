@@ -8,6 +8,7 @@ export default class Main extends React.Component{
 		return <AppProvider>
 			<div>
 				<ButtonGroup buttonList={ AdminEditButtons }/>
+				
 			</div>
 		</AppProvider>
 	}

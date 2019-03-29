@@ -8,6 +8,7 @@ class AppProvider extends React.Component {
 		this.state = {
 			store: 'Walmart',
 			displayVal: function(){
+				console.log(this);
 				alert('Hello');
 			},
 			displayKey: function(){
@@ -17,7 +18,7 @@ class AppProvider extends React.Component {
 	}
 	
 	render(){
-		return <AppContext.Provider value={this.state}>{ this.props.children }</AppContext.Provider>
+		return <AppContext.Provider value={this.clone}>{ this.props.children }</AppContext.Provider>
 	}
 }
 

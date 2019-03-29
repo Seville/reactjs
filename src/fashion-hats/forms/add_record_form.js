@@ -3,7 +3,7 @@ import React from 'react';
 export default class AddRecordForm extends React.Component {
 	render() {
 		if(!this.props.show) {
-			return (<div></div>)
+			return '';
 		} else {
 			return (
 				<form name="add_form">

@@ -6,7 +6,13 @@ class AppProvider extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			store: 'Walmart'
+			store: 'Walmart',
+			displayVal: function(){
+				alert('Hello');
+			},
+			displayKey: function(){
+				alert('Ok');
+			}
 		};
 	}
 	

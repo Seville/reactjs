@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { AppProvider, AppContext }  from '../app-context';
+import ButtonGroup from './ui-components/button-group';
+import AdminEditButtons from './ui-components/admin-buttons';
 
 export default class Main extends React.Component{
 	render(){
 		return <AppProvider>
 			<div><AppContext.Consumer>
-					{ (context) => <div>{ context.store }</div> }
+					{(context) => <div>
+						<ButtonGroup buttonList={ AdminEditButtons }/>
+					</div>}
 				</AppContext.Consumer>
 			</div>
 		</AppProvider>

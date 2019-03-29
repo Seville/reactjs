@@ -1,8 +1,8 @@
 import React from 'react';
 import { AppProvider, AppContext }  from './app_context';
-import AddRecordForm from './forms/add_record_form';
-import SearchRecordForm from './forms/search_record_form';
-import EditRecordForm from './forms/edit_record_form';
+import AddCustomerForm from './forms/add_customer_record';
+import SearchCustomerForm from './forms/search_customer_record';
+import EditCustomerForm from './forms/edit_customer_record';
 import Table from './ui-components/table';
 import RestStatus from './services/rest_status';
 import ButtonEvents from './events/button_events';
@@ -40,7 +40,7 @@ export default class Main extends React.Component{
 		this.clone = { ...this.state };
 		this.setState({
 			isTable: true
-		})
+		});
 	}
 	
 	render(){
@@ -54,13 +54,14 @@ export default class Main extends React.Component{
 					<Table
 						show={this.state.isTable}
 						tblData={this.state.custData}
+						onEdit={(item) => this.showEditForm(item)}
 					/>
 					
-					<AddRecordForm show={this.state.isAdd} addRecord={() => this.addAccount()} />
+					<AddCustomerForm show={this.state.isAdd} addRecord={() => this.addAccount()} />
 					
-					<SearchRecordForm show={this.state.isSearch} onClick={(e) => this.searchByName(e)} />
+					<SearchCustomerForm show={this.state.isSearch} onClick={(e) => this.searchByName(e)} />
 					
-					<EditRecordForm 
+					<EditCustomerForm 
 						show={this.state.isEdit} 
 						selected={this.state.selected} 
 						updateRecord={(e) => this.updateAccount(e)}

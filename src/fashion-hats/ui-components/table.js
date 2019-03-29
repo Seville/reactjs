@@ -12,11 +12,11 @@ let Table = (props) => {
 					{ props.tblData.headers.map( (header, i) => <th key={tableName+'-header-'+i}>{ header }</th>) }
 				</tr>
 				{ props.tblData.data.map((item, indx) => 
-					<tr key={tableName+'-row-'+indx}>
+					<tr key={tableName+'-row-'+indx} onClick={() => props.onEdit(item)}>
 						{ Object.keys(item).map((key, ind) => 
-							<td key={tableName+'-cell-'+key+'-'+ind}>{item[key]}</td>
+							<td key={tableName+'-cell-'+key+'-'+ind}>{ item[key] }</td>
 						)}
-					</tr>)
+					</tr> )
 				}
 			</tbody>
 		</table>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class SearchRecordForm extends React.Component {
+export default class SearchCustomerForm extends React.Component {
 	render() {
 		if(!this.props.show) {
 			return (<div></div>)

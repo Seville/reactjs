@@ -6,11 +6,8 @@ import AdminEditButtons from './ui-components/admin-buttons';
 export default class Main extends React.Component{
 	render(){
 		return <AppProvider>
-			<div><AppContext.Consumer>
-					{(context) => <div>
-						<ButtonGroup buttonList={ AdminEditButtons }/>
-					</div>}
-				</AppContext.Consumer>
+			<div>
+				<ButtonGroup buttonList={ AdminEditButtons }/>
 			</div>
 		</AppProvider>
 	}

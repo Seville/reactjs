@@ -13,11 +13,13 @@ let Table = (props) => {
 				</tr>
 				{ props.tblData.data.map((item, indx) => 
 					<tr key={tableName+'-row-'+indx} onClick={() => props.onEdit(item)}>
-						{ Object.keys(item).map((key, ind) => 
-							<td key={tableName+'-cell-'+key+'-'+ind}>{ item[key] }</td>
-						)}
-					</tr> )
-				}
+						{ Object.keys(item).map((key, ind) => {
+							if(key !== 'id'){
+								return <td key={tableName+'-cell-'+key+'-'+ind}>{ item[key] }</td>
+							}
+						})}
+					</tr> 
+				)}
 			</tbody>
 		</table>
 	}

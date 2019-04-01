@@ -44,3 +44,4 @@ const searchList = function(e, search){
 }
 
 export default { updateAccount, addAccount, searchList }
+

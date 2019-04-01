@@ -24,4 +24,5 @@ let Table = (props) => {
 		</table>
 	}
 };
+
 export default Table;

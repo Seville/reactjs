@@ -20,25 +20,24 @@
 		});
 	};
 	
-	const showGrid = function() {
+	const showTable = function() {
 		this.resetProps();
 		this.setState({
-			isGrid: true
+			isTable: true
 		});
 	};
 
+	const showAll = function() {
+		this.setState({
+			tableData: this.state.custTableData
+		})
+		this.showTable();
+	}
+
 	const resetProps = function() {
 		this.setState({
-			isEdit: false,
-			isRemove: false,
-			isSearch: false,
-			isAdd: false,
-			isGrid: false,
-			isLoaded: false,
-			items: [],
-			result: {error: null, success: null, noresult: null},
-			selected: null
+			...this.clone
 		});
 	};
 	
-export default { showAddForm, showSearchForm, showEditForm, showGrid, resetProps }
+export default { showAddForm, showSearchForm, showEditForm, showTable, showAll, resetProps }

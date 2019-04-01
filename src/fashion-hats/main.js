@@ -35,6 +35,7 @@ export default class Main extends React.Component{
 	// Customer Operations
 	updateAccount = CustomerEvents.updateAccount;
 	addAccount = CustomerEvents.addAccount;
+	searchList = CustomerEvents.searchList;
 	
 	componentWillMount(){
 		this.setState({
@@ -44,6 +45,7 @@ export default class Main extends React.Component{
 	
 	componentDidMount(){
 		this.clone = { ...this.state };
+		delete this.clone["custList"];
 		this.setState({
 			isTable: true
 		});
@@ -65,7 +67,7 @@ export default class Main extends React.Component{
 					
 					<AddCustomerForm show={this.state.isAdd} addRecord={(e, addData) => this.addAccount(e, addData)} />
 					
-					<SearchCustomerForm show={this.state.isSearch} onClick={(e) => this.searchByName(e)} />
+					<SearchCustomerForm show={this.state.isSearch} search={(e, prop, val) => this.searchList(e, prop, val)} />
 					
 					<EditCustomerForm 
 						show={this.state.isEdit} 

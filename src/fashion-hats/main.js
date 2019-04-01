@@ -18,7 +18,8 @@ export default class Main extends React.Component{
 			isAdd: false,
 			isTable: false,
 			isLoaded: false,
-			custList: {},
+			custTableData: {},
+			tableData: {},
 			result: {error: null, success: null, noresult: null},
 			selected: null,
 		};
@@ -30,6 +31,7 @@ export default class Main extends React.Component{
 	showSearchForm = ButtonEvents.showSearchForm;
 	showEditForm = ButtonEvents.showEditForm;
 	showTable = ButtonEvents.showTable;
+	showAll = ButtonEvents.showAll;
 	resetProps = ButtonEvents.resetProps;
 	
 	// Customer Operations
@@ -39,13 +41,15 @@ export default class Main extends React.Component{
 	
 	componentWillMount(){
 		this.setState({
-			custList: SEED_DATA
+			custTableData: SEED_DATA,
+			tableData: SEED_DATA,
 		})
 	}
 	
 	componentDidMount(){
 		this.clone = { ...this.state };
-		delete this.clone["custList"];
+		delete this.clone["custTableData"];
+		delete this.clone["tableData"];
 		this.setState({
 			isTable: true
 		});
@@ -54,14 +58,14 @@ export default class Main extends React.Component{
 	render(){
 		return <div>
 					<section>
-						<button className="btn" onClick={() => this.showTable()}>Show all</button>&nbsp;
+						<button className="btn" onClick={() => this.showAll()}>Show all</button>&nbsp;
 						<button className="btn" onClick={() => this.showAddForm()}>Add record</button>&nbsp;
 						<button className="btn" onClick={() => this.showSearchForm()}>Search</button>
 					</section>
 				
 					<Table
 						show={this.state.isTable}
-						tblData={this.state.custList}
+						tblData={this.state.tableData}
 						onEdit={(item) => this.showEditForm(item)}
 					/>
 					

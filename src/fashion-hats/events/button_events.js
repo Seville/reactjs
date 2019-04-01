@@ -27,10 +27,17 @@
 		});
 	};
 
+	const showAll = function() {
+		this.setState({
+			tableData: this.state.custTableData
+		})
+		this.showTable();
+	}
+
 	const resetProps = function() {
 		this.setState({
 			...this.clone
 		});
 	};
 	
-export default { showAddForm, showSearchForm, showEditForm, showTable, resetProps }
+export default { showAddForm, showSearchForm, showEditForm, showTable, showAll, resetProps }

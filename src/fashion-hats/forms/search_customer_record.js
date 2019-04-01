@@ -11,7 +11,7 @@ export default class SearchCustomerForm extends React.Component {
 	}
 	render() {
 		if(!this.props.show) {
-			this.search = {};
+			this.search = {srch_prop: 'fname', srch_val: ''};
 			return '';
 		} else {
 			return (

@@ -1,3 +1,12 @@
+import SEED_DATA from '../seed-data/customer_info';
+
+const loadCustomerList = function(){
+	this.setState({
+		custTableData: SEED_DATA,
+		tableData: SEED_DATA,
+	});
+}
+
 const updateAccount = function(e, cData){
 	let selected = this.state.selected;
 	for(let key in this.state.custTableData.data){
@@ -43,5 +52,5 @@ const searchList = function(e, search){
 	this.showTable();
 }
 
-export default { updateAccount, addAccount, searchList }
+export default { updateAccount, addAccount, searchList, loadCustomerList }
 

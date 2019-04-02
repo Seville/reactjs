@@ -7,7 +7,6 @@ import Table from './ui-components/table';
 import RestStatus from './services/rest_status';
 import ButtonEvents from './events/button_events';
 import CustomerEvents from './events/customer_events';
-import SEED_DATA from './seed-data/customer_info'
 
 export default class Main extends React.Component{
 	constructor(props){
@@ -38,12 +37,10 @@ export default class Main extends React.Component{
 	updateAccount = CustomerEvents.updateAccount;
 	addAccount = CustomerEvents.addAccount;
 	searchList = CustomerEvents.searchList;
+	loadCustomerList = CustomerEvents.loadCustomerList;
 	
 	componentWillMount(){
-		this.setState({
-			custTableData: SEED_DATA,
-			tableData: SEED_DATA,
-		})
+		this.loadCustomerList();
 	}
 	
 	componentDidMount(){

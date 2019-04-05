@@ -1,10 +1,9 @@
-import React from 'react';
-import { AppProvider, AppContext }  from './app_context';
+import React, { Component } from 'react';
 import AddCustomerForm from './forms/add_customer_record';
 import SearchCustomerForm from './forms/search_customer_record';
 import EditCustomerForm from './forms/edit_customer_record';
 import Table from './ui-components/table';
-import RestStatus from './services/rest_status';
+import CustomerTable from './ui-components/customer_table';
 import ButtonEvents from './events/button_events';
 import CustomerEvents from './events/customer_events';
 
@@ -17,8 +16,6 @@ export default class Main extends React.Component{
 			isAdd: false,
 			isTable: false,
 			isLoaded: false,
-			custTableData: {},
-			tableData: {},
 			result: {error: null, success: null, noresult: null},
 			selected: null,
 		};
@@ -45,8 +42,6 @@ export default class Main extends React.Component{
 	
 	componentDidMount(){
 		this.clone = { ...this.state };
-		delete this.clone["custTableData"];
-		delete this.clone["tableData"];
 		this.setState({
 			isTable: true
 		});
@@ -59,12 +54,12 @@ export default class Main extends React.Component{
 						<button className="btn" onClick={() => this.showAddForm()}>Add record</button>&nbsp;
 						<button className="btn" onClick={() => this.showSearchForm()}>Search</button>
 					</section>
-				
-					<Table
+					
+					<CustomerTable render={(data) => <Table 
+						tblData={data} 
 						show={this.state.isTable}
-						tblData={this.state.tableData}
-						onEdit={(item) => this.showEditForm(item)}
-					/>
+						onEdit={(item) => this.showEditForm(item)}/> }
+				    />
 					
 					<AddCustomerForm show={this.state.isAdd} addRecord={(e, addData) => this.addAccount(e, addData)} />
 					

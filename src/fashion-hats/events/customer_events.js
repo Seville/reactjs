@@ -2,8 +2,7 @@ import SEED_DATA from '../seed-data/customer_info';
 
 const loadCustomerList = function(){
 	this.setState({
-		custTableData: SEED_DATA,
-		tableData: SEED_DATA,
+		custTableData: SEED_DATA
 	});
 }
 

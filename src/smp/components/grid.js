@@ -5,8 +5,8 @@ import GridRows from './gridRows';
 const Grid = ({gridHeaders, gridRows}) => (
 	<table>
 		<tbody>
-			<GridHeaders headers={ gridHeaders }/>
-			<GridRows rows={ gridRows }/>
+			<GridHeaders headers={gridHeaders}/>
+			<GridRows rows={gridRows}/>
 		</tbody>
 	</table>
 )

@@ -13,6 +13,11 @@ export const editStudent = student => ({
 	student
 });
 
+export const selectStudent = student => ({
+	type: 'SELECT_STUDENT',
+	student
+});
+
 export const showAllStudents = () => ({
 	type: 'SHOW_ALL_STUDENTS'
-})
+});

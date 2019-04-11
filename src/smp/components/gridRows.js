@@ -1,15 +1,13 @@
 import React from 'react'
+import GridRow from '../containers/GridRow';
+import { RowTypes } from '../store/actions/student-management';
 
-const GridRows = ({rows}) => ( 
+const GridRows = ({rows}) => 
 	rows.map(row => 
-		<tr key={row['id']}>
-			{ Object.keys(row).map( col => {
-				if(col !== 'id'){
-					return <td key={row['id'] + col}>{ row[col] }</td>
-				}
-			}
-			)}
-		</tr>
-	));
+		<GridRow 
+			key={row['id']+"stnd-row"} 
+			rowData={row}
+		/>
+	);
 	
 export default GridRows;

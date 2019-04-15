@@ -1,5 +1,4 @@
 import React from 'react';
-import StudentLink from '../containers/StudentLink';
 
 const Header = () => (
 	<div>

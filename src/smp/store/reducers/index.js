@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import studentReducer from './student-reducer';
-import gridReducer from './grid-reducer';
+import formReducer from './form-reducer';
 
 export default combineReducers({
 	studentReducer,
-	gridReducer
+	formReducer
 });

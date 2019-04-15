@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { selectStudent } from '../store/actions/student-management';
+import { selectStudent } from '../../store/actions/student-management';
 
 const GridRow = ({dispatch, rowData}) => {
   return (

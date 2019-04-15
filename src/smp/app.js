@@ -1,9 +1,11 @@
 import React from 'react';
-import FilterGrid from './containers/FilterGrid';
+import StudentGrid from './containers/StudentGrid/studentGrid';
+import StudentForm from './containers/StudentForm/studentForm';
 
 const App = () => (
 	<div>
-		<FilterGrid />
+		<StudentGrid />
+		<StudentForm />
 	</div>
 )
 

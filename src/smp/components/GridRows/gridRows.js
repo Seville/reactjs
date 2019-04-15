@@ -1,6 +1,6 @@
 import React from 'react'
-import GridRow from '../containers/GridRow';
-import { RowTypes } from '../store/actions/student-management';
+import GridRow from '../../containers/GridRow/gridRow';
+import { RowTypes } from '../../store/actions/student-management';
 
 const GridRows = ({rows}) => 
 	rows.map(row => 

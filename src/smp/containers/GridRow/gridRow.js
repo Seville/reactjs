@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { selectStudent } from '../../store/actions/student-management';
+import { showNewForm } from '../../store/actions/form-display';
 
 const GridRow = ({dispatch, rowData}) => {
   return (
-		<tr key={rowData['id']} onClick={() => dispatch(selectStudent(rowData))}>
+		<tr key={rowData['id']} onClick={() => dispatch(showNewForm())}>
 			{ Object.keys(rowData).map( col => {
 				if(col !== 'id'){
 					return <td key={rowData['id'] + col}>{ rowData[col] }</td>

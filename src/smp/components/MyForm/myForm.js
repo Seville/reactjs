@@ -1,12 +1,31 @@
 import React from 'react';
 
-let createAttrs = (el, attr, attrVal) => {
-	var att = document.createAttribute(attr);
-	att.value = attrVal;
-	el.setAttributeNode(att);
+const MyForm = ({formData}) => {
+	if(formData === null){
+		return ('');
+	}
+	let controlsArray = [];	
+	for(let control of formData['controls']){
+		let label = React.createElement('label', {
+			htmlFor: control['attrs']['id'], 
+			key: control['attrs']['id'] + '-label'
+		},control['label']);
+		
+		let newControl =  React.createElement(control['tag'], control['attrs']);
+		controlsArray.push(label);
+		controlsArray.push(newControl);
+	}
+	
+	let submitBtn = React.createElement('div', { key: formData['attrs']['id']+'-1'},
+		React.createElement('button', {id: formData['submitId']}, 'Submit')
+	);
+	controlsArray.push(submitBtn);
+	
+	return React.createElement('form', formData['attrs'], controlsArray );
 }
 
-const MyForm = ({formData}) => {
+
+/*const MyForm = ({formData}) => {
 	let newForm = document.createElement('form');
 	for(let key in formData['attrs']){
 		if(key !== 'controls'){
@@ -21,8 +40,9 @@ const MyForm = ({formData}) => {
 		}
 		newForm.appendChild(newControl);
 	}
+	debugger;
 	
 	return newForm;
-}
+};*/
 
 export default MyForm;

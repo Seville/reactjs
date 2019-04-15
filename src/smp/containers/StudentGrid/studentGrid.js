@@ -2,8 +2,8 @@ import { connect } from 'react-redux';
 import Grid from '../../components/Grid/grid.js';
 
 const mapStateToProps = state => ({
-	gridHeaders: state.studentReducer.studentList.headers,
-	gridRows: state.studentReducer.studentList.data
+	gridHeaders: state.studentReducer.headers,
+	gridRows: state.studentReducer.data
 });
 
 export default connect(

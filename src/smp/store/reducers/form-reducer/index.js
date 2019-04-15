@@ -1,60 +1,14 @@
-const initialState = {
-	formConfig: {
-		attrs: {
-			id: 'add-student',
-			name: 'add-student' 
-		},
-		controls: [
-			{ 
-				tag: 'input', 
-				attrs: {
-					id: 'add-fname',
-					name: 'add-fname',
-					type: 'text'
-				}, 
-				label: 'First Name' 
-			},
-			{ 
-				tag: 'input', 
-				attrs: {
-					id: 'add-lname',
-					name: 'add-lname',
-					type: 'text'
-				}, 
-				label: 'Last Name' 
-			},
-			{ 
-				tag: 'input', 
-				attrs: {
-					id: 'add-age',
-					name: 'add-age',
-					type: 'text'
-				}, 
-				label: 'Age' 
-			},
-			{ 
-				tag: 'input', 
-				attrs: {
-					id: 'add-gender',
-					name: 'add-gender',
-					type: 'text'
-				}, 
-				label: 'Gender' 
-			}
-		]
-	}
-};
+import { newStudentFormConfig } from '../../../constants/newStudentFormConfig.js';
+import { editStudentFormConfig } from '../../../constants/editStudentFormConfig.js';
+
+const initialState = null;
 
 const formReducer = (state = initialState, action) => {
 	switch(action.type) {
-		case 'EDIT_FORM':
-			return {
-				...state,
-			}
-		case 'NEW_FORM':
-			return {
-				...state,
-			}
+		case 'SHOW_EDIT_FORM':
+			return editStudentFormConfig;
+		case 'SHOW_NEW_FORM':
+			return newStudentFormConfig;
 		default:
 			return state
 	}

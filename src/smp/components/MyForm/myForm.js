@@ -1,6 +1,7 @@
 import React from 'react';
+import MyButton from '../../containers/MyButton/myButton';
 
-const MyForm = ({formData, onCancel}) => {
+const MyForm = ({formData}) => {
 	if(formData === null){
 		return ('');
 	}
@@ -16,11 +17,15 @@ const MyForm = ({formData, onCancel}) => {
 		controlsArray.push(newControl);
 	}
 	
-	let submitBtn = React.createElement('div', { key: formData['attrs']['id']+'-1'}, [
-		React.createElement('button', {id: formData['submitId'], key: formData['submitId']+'-submit'}, 'Submit'),
-		React.createElement('button', {className: 'cancel-btn', key: formData['submitId']+'-cancel', onClick:() => onCancel() }, 'Cancel')
-	]);
-	controlsArray.push(submitBtn);
+	let buttonGroup = [];
+	if(formData['buttonGroup'] && formData['buttonGroup']['buttons'] && formData['buttonGroup']['buttons'].length > 0){
+		for(let button of formData['buttonGroup']['buttons']){
+			let newBtn = React.createElement(MyButton, button['attrs'], button['text']);
+			buttonGroup.push(newBtn);
+		}
+	}
+	
+	controlsArray.push(buttonGroup);
 	
 	return React.createElement('form', formData['attrs'], controlsArray );
 }

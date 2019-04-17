@@ -1,3 +1,6 @@
+import { hideForm } from '../store/actions/form-display';
+import { addStudent } from '../store/actions/student-management';
+
 export const newStudentFormConfig = {
 	submitId: 'add-student-id',
 	attrs: {
@@ -45,5 +48,31 @@ export const newStudentFormConfig = {
 			}, 
 			label: 'Gender' 
 		}
-	]
+	],
+	buttonGroup: {
+		attrs: {
+			className: 'btn-group',
+			id: 'add-student-btn-group'
+		},
+		buttons: [
+			{
+				
+				attrs: {
+					key: 'add-btn-01',
+					id: 'add-btn-01',
+					textVal: 'Add New Student',
+					callBack: hideForm()
+				}
+			},
+			{
+				text: 'Cancel',
+				attrs: {
+					key: 'add-btn-02',
+					id: 'add-btn-02',
+					textVal: 'Cancel',
+					callBack: () => addStudent()
+				}
+			}
+		]
+	}
 }

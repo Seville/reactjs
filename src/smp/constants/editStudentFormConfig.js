@@ -45,5 +45,28 @@ export const editStudentFormConfig = {
 			}, 
 			label: 'Gender' 
 		}
-	]
+	],
+	buttonGroup: {
+		attrs: {
+			className: 'btn-group',
+			id: 'edit-student-btn-group'
+		},
+		buttons: [
+			{
+				attrs: {
+					key: 'edit-btn-01',
+					id: 'edit-btn-01',
+					textVal: 'Edit Student'
+				}
+			},
+			{
+				text: 'Cancel',
+				attrs: {
+					key: 'edit-btn-02',
+					id: 'edit-btn-02',
+					textVal: 'Cancel'
+				}
+			}
+		]
+	}
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MyForm = ({formData}) => {
+const MyForm = ({formData, onCancel}) => {
 	if(formData === null){
 		return ('');
 	}
@@ -16,33 +16,13 @@ const MyForm = ({formData}) => {
 		controlsArray.push(newControl);
 	}
 	
-	let submitBtn = React.createElement('div', { key: formData['attrs']['id']+'-1'},
-		React.createElement('button', {id: formData['submitId']}, 'Submit')
-	);
+	let submitBtn = React.createElement('div', { key: formData['attrs']['id']+'-1'}, [
+		React.createElement('button', {id: formData['submitId'], key: formData['submitId']+'-submit'}, 'Submit'),
+		React.createElement('button', {className: 'cancel-btn', key: formData['submitId']+'-cancel', onClick:() => onCancel() }, 'Cancel')
+	]);
 	controlsArray.push(submitBtn);
 	
 	return React.createElement('form', formData['attrs'], controlsArray );
 }
-
-
-/*const MyForm = ({formData}) => {
-	let newForm = document.createElement('form');
-	for(let key in formData['attrs']){
-		if(key !== 'controls'){
-			createAttrs(newForm, key, formData['attrs'][key]);
-		}
-	}
-	
-	for(let control of formData['controls']){
-		let newControl = document.createElement(control['tag']);
-		for(let key in control['attrs']){
-			createAttrs(newControl, key, control['attrs'][key]);
-		}
-		newForm.appendChild(newControl);
-	}
-	debugger;
-	
-	return newForm;
-};*/
 
 export default MyForm;

@@ -12,8 +12,6 @@ const studentReducer = (state = initialState, action) => {
 			return { ...state }
 		case 'SELECT_STUDENT':
 			return { ...state }
-		case 'SHOW_ALL_STUDENTS':
-			return { ...state }
 		default:
 			return state
 	}

@@ -5,3 +5,7 @@ export const showEditForm = () => ({
 export const showNewForm = () => ({
 	type: 'SHOW_NEW_FORM'
 });
+
+export const hideForm = () => ({
+	type: 'HIDE_FORM'
+});

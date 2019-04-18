@@ -61,7 +61,7 @@ export const newStudentFormConfig = {
 					key: 'add-btn-01',
 					id: 'add-btn-01',
 					textVal: 'Add New Student',
-					callBack: hideForm()
+					callBack: addStudent
 				}
 			},
 			{
@@ -70,7 +70,7 @@ export const newStudentFormConfig = {
 					key: 'add-btn-02',
 					id: 'add-btn-02',
 					textVal: 'Cancel',
-					callBack: () => addStudent()
+					callBack: hideForm
 				}
 			}
 		]

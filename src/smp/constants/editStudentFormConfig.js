@@ -1,3 +1,6 @@
+import { hideForm } from '../store/actions/form-display';
+import { editStudent } from '../store/actions/student-management';
+
 export const editStudentFormConfig = {
 	submitId: 'edit-student-id',
 	attrs: {
@@ -56,7 +59,8 @@ export const editStudentFormConfig = {
 				attrs: {
 					key: 'edit-btn-01',
 					id: 'edit-btn-01',
-					textVal: 'Edit Student'
+					textVal: 'Edit Student',
+					callBack: editStudent
 				}
 			},
 			{
@@ -64,7 +68,8 @@ export const editStudentFormConfig = {
 				attrs: {
 					key: 'edit-btn-02',
 					id: 'edit-btn-02',
-					textVal: 'Cancel'
+					textVal: 'Cancel',
+					callBack: hideForm
 				}
 			}
 		]

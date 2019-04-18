@@ -1,7 +1,7 @@
 import React from 'react';
 import MyButton from '../../containers/MyButton/myButton';
 
-const MyForm = ({formData}) => {
+const MyForm = ({formData, selectedData}) => {
 	if(formData === null){
 		return ('');
 	}
@@ -12,7 +12,12 @@ const MyForm = ({formData}) => {
 			key: control['attrs']['id'] + '-label'
 		},control['label']);
 		
-		let newControl =  React.createElement(control['tag'], control['attrs']);
+		let newControl;
+		if(selectedData == null){
+			newControl = React.createElement(control['tag'], control['attrs']);
+		} else if(selectedData[control['field']] && selectedData[control['field']] !== null){
+			newControl = React.createElement(control['tag'], {...control['attrs'], defaultValue: selectedData[control['field']] });
+		}
 		controlsArray.push(label);
 		controlsArray.push(newControl);
 	}

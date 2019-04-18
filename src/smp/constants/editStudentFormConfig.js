@@ -10,41 +10,49 @@ export const editStudentFormConfig = {
 	controls: [
 		{ 
 			tag: 'input', 
+			field: 'stndFname',
 			attrs: {
 				key: 'edit-01',
 				id: 'edit-fname',
 				name: 'edit-fname',
-				type: 'text'
+				type: 'text',
+				defaultValue: ''
 			}, 
 			label: 'First Name' 
 		},
 		{ 
-			tag: 'input', 
+			tag: 'input',
+			field: 'stndLname',			
 			attrs: {
 				key: 'edit-02',
 				id: 'edit-lname',
 				name: 'edit-lname',
-				type: 'text'
+				type: 'text',
+				defaultValue: ''
 			}, 
 			label: 'Last Name' 
 		},
 		{ 
-			tag: 'input', 
+			tag: 'input',
+			field: 'stndAge',
 			attrs: {
 				key: 'edit-03',
 				id: 'edit-age',
 				name: 'edit-age',
-				type: 'text'
+				type: 'text',
+				defaultValue: ''
 			}, 
 			label: 'Age' 
 		},
 		{ 
 			tag: 'input', 
+			field: 'stndGender',
 			attrs: {
 				key: 'edit-04',
 				id: 'edit-gender',
 				name: 'edit-gender',
-				type: 'text'
+				type: 'text',
+				defaultValue: ''
 			}, 
 			label: 'Gender' 
 		}

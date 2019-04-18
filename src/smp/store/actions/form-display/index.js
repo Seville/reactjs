@@ -1,5 +1,6 @@
-export const showEditForm = () => ({
-	type: 'SHOW_EDIT_FORM'
+export const showEditForm = (selected) => ({
+	type: 'SHOW_EDIT_FORM',
+	selectedRow: selected
 });
 
 export const showNewForm = () => ({

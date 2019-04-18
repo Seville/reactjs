@@ -4,12 +4,9 @@ import { hideForm } from '../../store/actions/form-display';
 import { addStudent } from '../../store/actions/student-management';
 
 const mapStateToProps = state => ({
-	formData: state.formReducer
+	formData: state.formReducer.formConfig,
+	selectedData: state.formReducer.selectedData
 });
-
-/*const mapDispatchToProps = (dispatch, ownProps) => ({
-	onCancel: () => dispatch(hideForm());
-});*/
 
 export default connect(
 	mapStateToProps

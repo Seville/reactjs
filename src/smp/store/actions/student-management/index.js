@@ -8,9 +8,9 @@ export const deleteStudent = id => ({
 	id
 });
 
-export const editStudent = student => ({
+export const editStudent = (formName) => ({
 	type: 'EDIT_STUDENT',
-	student
+	formName
 });
 
 export const selectStudent = student => ({

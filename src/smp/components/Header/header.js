@@ -1,10 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import MyButton from '../../containers/MyButton/myButton';
+import { showNewForm } from '../../store/actions/form-display';
 
-const Header = () => (
-	<div>
-		<span>Show: </span>
-		<button>Show All</button>
-	</div>
+const Header = ({dispatch}) => (
+	<nav>
+		<MyButton textVal="New Student" callBack={showNewForm}/>
+	</nav>
 )
 
-export default Header;
+export default connect()(Header);

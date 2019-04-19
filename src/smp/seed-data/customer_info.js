@@ -1,5 +1,6 @@
 let SEED_DATA = {
-	tblname: 'std_list',
+	tblname: 'student_list',
+	rowType: 'student',
 	headers: ['First', 'Last', 'Age', 'Gender'],
 	data: [
 		{ id: 1, stndFname: 'Justin', stndLname: 'Smith', stndAge: 23, stndGender: 'male' },

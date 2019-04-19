@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { showEditForm } from '../../store/actions/form-display';
 
-const GridRow = ({dispatch, rowData}) => (
-	<tr key={rowData['id']} onClick={() => dispatch(showEditForm(rowData))}>
+const GridRow = ({dispatch, rowData, rowType}) => (
+	<tr key={rowData['id']} onClick={() => dispatch(showEditForm(rowData, rowType))}>
 		{ 
 			Object.keys(rowData).map(col => {
 				if(col !== 'id'){
@@ -14,7 +14,8 @@ const GridRow = ({dispatch, rowData}) => (
 			})
 		}
 	</tr>
- )
+)
+
 
 export default connect()(GridRow)
  

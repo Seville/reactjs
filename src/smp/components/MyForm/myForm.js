@@ -25,7 +25,12 @@ const MyForm = ({formData, selectedData}) => {
 	let buttonGroup = [];
 	if(formData['buttonGroup'] && formData['buttonGroup']['buttons'] && formData['buttonGroup']['buttons'].length > 0){
 		for(let button of formData['buttonGroup']['buttons']){
-			let newBtn = React.createElement(MyButton, button['attrs'], button['text']);
+			let newBtn;
+			if(button['text'] !== 'Cancel'){
+				newBtn = React.createElement(MyButton, button['attrs'], button['text']);
+			} else {
+				newBtn = React.createElement(MyButton, {...button['attrs']}, button['text']);
+			}
 			buttonGroup.push(newBtn);
 		}
 	}

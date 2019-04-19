@@ -15,7 +15,10 @@ const formReducer = (state = initialState, action) => {
 			}
 			return editFormData;
 		case 'SHOW_NEW_FORM':
-			return newStudentFormConfig;
+			let newFormData = {
+				formConfig: newStudentFormConfig
+			}
+			return newFormData;
 		case 'HIDE_FORM':
 			return initialState;
 		default:

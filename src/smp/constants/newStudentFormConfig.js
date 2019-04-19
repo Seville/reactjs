@@ -9,7 +9,8 @@ export const newStudentFormConfig = {
 	},
 	controls: [
 		{ 
-			tag: 'input', 
+			tag: 'input',
+			field: 'stndFname',
 			attrs: {
 				key: 'add-01',
 				id: 'add-fname',
@@ -20,6 +21,7 @@ export const newStudentFormConfig = {
 		},
 		{ 
 			tag: 'input', 
+			field: 'stndLname',
 			attrs: {
 				key: 'add-02',
 				id: 'add-lname',
@@ -29,7 +31,8 @@ export const newStudentFormConfig = {
 			label: 'Last Name' 
 		},
 		{ 
-			tag: 'input', 
+			tag: 'input',
+			field: 'stndAge',
 			attrs: {
 				key: 'add-03',
 				id: 'add-age',
@@ -39,7 +42,8 @@ export const newStudentFormConfig = {
 			label: 'Age' 
 		},
 		{ 
-			tag: 'input', 
+			tag: 'input',
+			field: 'stndGender',
 			attrs: {
 				key: 'add-04',
 				id: 'add-gender',

@@ -2,19 +2,19 @@ import { hideForm } from '../store/actions/form-display';
 import { addStudent } from '../store/actions/student-management';
 
 export const newStudentFormConfig = {
-	submitId: 'add-student-id',
+	submitId: 'new-submit-student-id',
 	attrs: {
-		id: 'add-student',
-		name: 'add-student' 
+		id: 'new-student',
+		name: 'new-student' 
 	},
 	controls: [
 		{ 
 			tag: 'input',
 			field: 'stndFname',
 			attrs: {
-				key: 'add-01',
-				id: 'add-fname',
-				name: 'student-fname',
+				key: 'new-01',
+				id: 'new-fname',
+				name: 'new-student-fname',
 				type: 'text'
 			}, 
 			label: 'First Name' 
@@ -23,9 +23,9 @@ export const newStudentFormConfig = {
 			tag: 'input', 
 			field: 'stndLname',
 			attrs: {
-				key: 'add-02',
-				id: 'add-lname',
-				name: 'student-lname',
+				key: 'new-02',
+				id: 'new-lname',
+				name: 'new-student-lname',
 				type: 'text'
 			}, 
 			label: 'Last Name' 
@@ -34,9 +34,9 @@ export const newStudentFormConfig = {
 			tag: 'input',
 			field: 'stndAge',
 			attrs: {
-				key: 'add-03',
-				id: 'add-age',
-				name: 'student-age',
+				key: 'new-03',
+				id: 'new-age',
+				name: 'new-student-age',
 				type: 'text'
 			}, 
 			label: 'Age' 
@@ -45,9 +45,9 @@ export const newStudentFormConfig = {
 			tag: 'input',
 			field: 'stndGender',
 			attrs: {
-				key: 'add-04',
-				id: 'add-gender',
-				name: 'student-gender',
+				key: 'new-04',
+				id: 'new-gender',
+				name: 'new-student-gender',
 				type: 'text'
 			}, 
 			label: 'Gender' 
@@ -56,23 +56,24 @@ export const newStudentFormConfig = {
 	buttonGroup: {
 		attrs: {
 			className: 'btn-group',
-			id: 'add-student-btn-group'
+			id: 'new-student-btn-group'
 		},
 		buttons: [
 			{
 				
 				attrs: {
-					key: 'add-btn-01',
-					id: 'add-btn-01',
+					key: 'new-btn-01',
+					id: 'new-btn-01',
 					textVal: 'Add New Student',
-					callBack: addStudent
+					callBack: addStudent,
+					callBackProp: null
 				}
 			},
 			{
 				text: 'Cancel',
 				attrs: {
-					key: 'add-btn-02',
-					id: 'add-btn-02',
+					key: 'new-btn-02',
+					id: 'new-btn-02',
 					textVal: 'Cancel',
 					callBack: hideForm
 				}

@@ -2,7 +2,7 @@ import { hideForm } from '../store/actions/form-display';
 import { editStudent } from '../store/actions/student-management';
 
 export const editStudentFormConfig = {
-	submitId: 'edit-student-id',
+	submitId: 'edit-student-submit-id',
 	attrs: {
 		id: 'edit-student',
 		name: 'edit-student' 
@@ -68,7 +68,8 @@ export const editStudentFormConfig = {
 					key: 'edit-btn-01',
 					id: 'edit-btn-01',
 					textVal: 'Edit Student',
-					callBack: editStudent
+					callBack: editStudent,
+					callBackProp: null
 				}
 			},
 			{

@@ -7,13 +7,13 @@ const initialState = {
 };
 
 let getFormConfig = (rowType, selectedRow, operation) => {
-	if(rowType == 'student' && operation == 'edit'){
+	if(rowType === 'student' && operation === 'edit'){
 		return {
 			formConfig: editStudentFormConfig,
 			selectedData: selectedRow
 		}
 	}
-	if(rowType == 'student' && operation == 'new'){
+	if(rowType === 'student' && operation === 'new'){
 		return {
 			formConfig: newStudentFormConfig
 		}

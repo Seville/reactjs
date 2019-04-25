@@ -1,13 +1,13 @@
 import React from 'react';
 import StudentGrid from './containers/StudentGrid/studentGrid';
-import StudentForm from './containers/StudentForm/studentForm';
 import Header from './components/Header/header';
+import StudentEditForm from './containers/StudentForms/StudentEditForm/studentEditForm'
 
 const App = () => (
 	<div>
 		<Header />
 		<StudentGrid />
-		<StudentForm />
+		<StudentEditForm />
 	</div>
 )
 

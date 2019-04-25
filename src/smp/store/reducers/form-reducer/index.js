@@ -9,13 +9,18 @@ const initialState = {
 	selectedData: null
 };
 
+<<<<<<< HEAD
 let getFormConfig = (rowType, operation) => {
 	if(rowType === 'student' && operation === 'edit'){
+=======
+let getFormConfig = (rowType, selectedRow, operation) => {
+	if(rowType == 'student' && operation == 'edit'){
+>>>>>>> parent of 1b87f21... update package to use object-mapper
 		return {
 			formConfig: editStudentFormConfig
 		}
 	}
-	if(rowType === 'student' && operation === 'new'){
+	if(rowType == 'student' && operation == 'new'){
 		return {
 			formConfig: newStudentFormConfig
 		}

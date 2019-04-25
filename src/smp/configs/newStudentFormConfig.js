@@ -14,7 +14,7 @@ export const newStudentFormConfig = {
 			attrs: {
 				key: 'new-01',
 				id: 'new-fname',
-				name: 'student-fname',
+				name: 'new-student-fname',
 				type: 'text'
 			}, 
 			label: 'First Name' 
@@ -25,7 +25,7 @@ export const newStudentFormConfig = {
 			attrs: {
 				key: 'new-02',
 				id: 'new-lname',
-				name: 'student-lname',
+				name: 'new-student-lname',
 				type: 'text'
 			}, 
 			label: 'Last Name' 
@@ -36,7 +36,7 @@ export const newStudentFormConfig = {
 			attrs: {
 				key: 'new-03',
 				id: 'new-age',
-				name: 'student-age',
+				name: 'new-student-age',
 				type: 'text'
 			}, 
 			label: 'Age' 
@@ -47,7 +47,7 @@ export const newStudentFormConfig = {
 			attrs: {
 				key: 'new-04',
 				id: 'new-gender',
-				name: 'student-gender',
+				name: 'new-student-gender',
 				type: 'text'
 			}, 
 			label: 'Gender' 

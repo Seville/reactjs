@@ -7,24 +7,15 @@ const initialState = SEED_DATA;
 
 let formDataToObject = (formName) => {
 	let formData = {};
-	let formSerialize = jQ(`#${formName}-student`).serialize();
+	let formSerialize = jQ(`#${formName}`).serialize();
 	let formList = formSerialize.split('&');
 	for(let input of formList){
 		let formEntity = input.split('=');
-		formData[formEntity[0]] = formEntity[1];
-	}
-	return formData;
-}
-
-let setUpdatedStudentInfo = (state, id, formName) => {
-	let updatedFormData = formDataToObject(formName);
-	for(let item in state['data']){
-		if(state['data'][item].id === id){
-			let updatedStudentData = objectMapper(updatedFormData, studentFormMap);
-			state['data'][item] = updatedStudentData;
+		if(formEntity[1] !== ''){
+			formData[formEntity[0]] = formEntity[1];
 		}
 	}
-	return state;
+	return formData;
 }
 
 const studentReducer = (state = initialState, action) => {
@@ -34,8 +25,15 @@ const studentReducer = (state = initialState, action) => {
 		case 'DELETE_STUDENT':
 			return { ...state }
 		case 'EDIT_STUDENT':
-			let updatedStudentInfo = setUpdatedStudentInfo(action.formName);
-			return { ...state }
+			let dataClone = [ ...state['data'] ];
+			let updatedFormData = formDataToObject(action.formName);
+			for(let item in dataClone){
+				if(dataClone[item].id === action.id){
+					let updatedStudentData = objectMapper(updatedFormData, studentFormMap);
+					dataClone[item] = { ...dataClone[item], ...updatedStudentData };
+				}
+			}
+			return {...state, data: dataClone };
 		case 'SELECT_STUDENT':
 			return { ...state }
 		default:

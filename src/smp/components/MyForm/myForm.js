@@ -16,7 +16,7 @@ const MyForm = ({formData, selectedData}) => {
 		if(selectedData == null){
 			newControl = React.createElement(control['tag'], control['attrs']);
 		} else if(selectedData[control['field']] && selectedData[control['field']] !== null){
-			newControl = React.createElement(control['tag'], {...control['attrs'], defaultValue: selectedData[control['field']] });
+			newControl = React.createElement(control['tag'], {...control['attrs'], defaultValue: selectedData[control['field']], value: selectedData[control['field']] });
 		}
 		controlsArray.push(label);
 		controlsArray.push(newControl);

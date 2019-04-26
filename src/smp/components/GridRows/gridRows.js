@@ -1,12 +1,11 @@
 import React from 'react'
 import GridRow from '../../containers/GridRow/gridRow';
 
-const GridRows = ({rows, type}) => 
+const GridRows = ({rows}) => 
 	rows.map(row => 
 		<GridRow 
 			key={row['id']+"stnd-row"} 
 			rowData={row}
-			rowType={type}
 		/>
 	);
 	

@@ -3,8 +3,7 @@ import Grid from '../../components/Grid/grid.js';
 
 const mapStateToProps = state => ({
 	gridHeaders: state.studentReducer.headers,
-	gridRows: state.studentReducer.data,
-	rowType: state.studentReducer.rowType
+	gridRows: state.studentReducer.data
 });
 
 export default connect(

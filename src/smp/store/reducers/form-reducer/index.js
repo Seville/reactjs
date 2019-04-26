@@ -1,39 +1,28 @@
 import { newStudentFormConfig } from '../../../configs/newStudentFormConfig';
 import { editStudentFormConfig } from '../../../configs/editStudentFormConfig';
-import { SHOW_EDIT_FORM } from '../../../constants/formActionConstants';
-import { SHOW_NEW_FORM } from '../../../constants/formActionConstants';
-import { HIDE_FORM } from '../../../constants/formActionConstants';
+import { SHOW_EDIT_FORM } from '../../../constants/formConstants';
+import { SHOW_NEW_FORM } from '../../../constants/formConstants';
+import { HIDE_FORM } from '../../../constants/formConstants';
 
 const initialState = {
 	formConfig: null,
 	selectedData: null
 };
 
-let getFormConfig = (rowType, selectedRow, operation) => {
-	if(rowType == 'student' && operation == 'edit'){
-		return {
-			formConfig: editStudentFormConfig
-		}
-	}
-	if(rowType == 'student' && operation == 'new'){
-		return {
-			formConfig: newStudentFormConfig
-		}
-	}
-}
+const isEqual = (a, b) => (
+	JSON.stringify(a) === JSON.stringify(b)
+)
 
 const formReducer = (state = initialState, action) => {
 	switch(action.type) {
 		case SHOW_EDIT_FORM:
-			let editFormConfig = getFormConfig(action.rowType, 'edit');
-			if(state.formConfig && state.formConfig.submitId === 'edit-student-submit'){
-				return Object.assign({}, state, { selectedData: action.selectedRow });
+			if(isEqual(state.formConfig, editStudentFormConfig)){
+				return { ...state, selectedData: action.selectedRow }
 			} else {
-				return { ...state, ...editFormConfig, selectedData: action.selectedRow };
+				return {...state, formConfig: editStudentFormConfig, selectedData: action.selectedRow }
 			}
 		case SHOW_NEW_FORM:
-			let newFormConfig = getFormConfig(action.rowType, 'new');
-			return Object.assign({}, state, newFormConfig, { selectedData: null });
+			return { ...state, formConfig: newStudentFormConfig, selectedData: action.selectedRow }
 		case HIDE_FORM:
 			return initialState;
 		default:

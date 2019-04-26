@@ -16,7 +16,8 @@ export const editStudentFormConfig = {
 				id: 'edit-fname',
 				name: 'student-fname',
 				type: 'text',
-				defaultValue: ''
+				defaultValue: '',
+				value: ''
 			}, 
 			label: 'First Name' 
 		},
@@ -28,7 +29,8 @@ export const editStudentFormConfig = {
 				id: 'edit-lname',
 				name: 'student-lname',
 				type: 'text',
-				defaultValue: ''
+				defaultValue: '',
+				value: ''
 			}, 
 			label: 'Last Name' 
 		},
@@ -40,7 +42,8 @@ export const editStudentFormConfig = {
 				id: 'edit-age',
 				name: 'student-age',
 				type: 'text',
-				defaultValue: ''
+				defaultValue: '',
+				value: ''
 			}, 
 			label: 'Age' 
 		},
@@ -52,7 +55,8 @@ export const editStudentFormConfig = {
 				id: 'edit-gender',
 				name: 'student-gender',
 				type: 'text',
-				defaultValue: ''
+				defaultValue: '',
+				value: ''
 			}, 
 			label: 'Gender' 
 		}

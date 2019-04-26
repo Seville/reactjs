@@ -1,11 +1,12 @@
 let SEED_DATA = {
-	tblname: 'cust_list',
+	tblname: 'student_list',
+	rowType: 'student',
 	headers: ['First', 'Last', 'Age', 'Gender'],
 	data: [
-		{ id: 1, fname: 'Justin', lname: 'Smith', age: 23, gender: 'male' },
-		{ id: 2, fname: 'Grayson', lname: 'Chance', age: 20, gender: 'male' },
-		{ id: 3, fname: 'Lilly', lname: 'Bell', age: 30, gender: 'female' },
-		{ id: 4, fname: 'Suri', lname: 'Chance', age: 25, gender: 'female' }
+		{ id: 1, stndFname: 'Justin', stndLname: 'Smith', stndAge: 23, stndGender: 'male' },
+		{ id: 2, stndFname: 'Grayson', stndLname: 'Chance', stndAge: 20, stndGender: 'male' },
+		{ id: 3, stndFname: 'Lilly', stndLname: 'Bell', stndAge: 30, stndGender: 'female' },
+		{ id: 4, stndFname: 'Suri', stndLname: 'Chance', stndAge: 25, stndGender: 'female' }
 	]
 }
 

@@ -8,9 +8,10 @@ export const deleteStudent = id => ({
 	id
 });
 
-export const editStudent = student => ({
+export const editStudent = (id, updateStudent) => ({
 	type: 'EDIT_STUDENT',
-	student
+	updateStudent,
+	id
 });
 
 export const selectStudent = student => ({

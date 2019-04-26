@@ -1,11 +1,10 @@
-export const showEditForm = (selected) => ({
+export const showEditForm = (selectedRow) => ({
 	type: 'SHOW_EDIT_FORM',
-	selectedRow: selected
+	selectedRow
 });
 
 export const showNewForm = () => ({
-	type: 'SHOW_NEW_FORM',
-	rowType: 'student'
+	type: 'SHOW_NEW_FORM'
 });
 
 export const hideForm = () => ({

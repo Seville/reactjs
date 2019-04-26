@@ -8,11 +8,11 @@ const initialState = SEED_DATA;
 let formDataToObject = (formName) => {
 	let formData = {};
 	let formSerialize = jQ(`#${formName}-student`).serialize();
-		let formList = formSerialize.split('&');
-		for(let input of formList){
-			let formEntity = input.split('=');
-			formData[formEntity[0]] = formEntity[1];
-		}
+	let formList = formSerialize.split('&');
+	for(let input of formList){
+		let formEntity = input.split('=');
+		formData[formEntity[0]] = formEntity[1];
+	}
 	return formData;
 }
 

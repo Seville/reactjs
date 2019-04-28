@@ -32,7 +32,6 @@ const studentReducer = (state = initialState, action) => {
 				}
 			}
 			let newStudentData = objectMapper(newFormData, studentFormMap);
-			debugger;
 			newStudentData['id'] = largestIndex + 1;
 			dataClone.push(newStudentData);
 			return { ...state, data: dataClone };

@@ -18,22 +18,36 @@ let formDataToObject = (formName) => {
 	return formData;
 }
 
+
+
 const studentReducer = (state = initialState, action) => {
 	switch(action.type) {
 		case 'ADD_STUDENT':
-			return { ...state }
+			let dataClone = [ ...state['data'] ];
+			let newFormData = formDataToObject(action.formName);
+			let largestIndex = 0;
+			for(let item of dataClone){
+				if(item['id'] > largestIndex){
+					largestIndex = item['id'];
+				}
+			}
+			let newStudentData = objectMapper(newFormData, studentFormMap);
+			debugger;
+			newStudentData['id'] = largestIndex + 1;
+			dataClone.push(newStudentData);
+			return { ...state, data: dataClone };
 		case 'DELETE_STUDENT':
 			return { ...state }
 		case 'EDIT_STUDENT':
-			let dataClone = [ ...state['data'] ];
+			let dataClone2 = [ ...state['data'] ];
 			let updatedFormData = formDataToObject(action.formName);
-			for(let item in dataClone){
-				if(dataClone[item].id === action.id){
+			for(let item in dataClone2){
+				if(dataClone2[item].id === action.id){
 					let updatedStudentData = objectMapper(updatedFormData, studentFormMap);
-					dataClone[item] = { ...dataClone[item], ...updatedStudentData };
+					dataClone2[item] = { ...dataClone2[item], ...updatedStudentData };
 				}
 			}
-			return {...state, data: dataClone };
+			return {...state, data: dataClone2 };
 		case 'SELECT_STUDENT':
 			return { ...state }
 		default:

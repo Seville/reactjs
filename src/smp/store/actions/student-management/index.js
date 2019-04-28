@@ -1,6 +1,6 @@
-export const addStudent = student => ({
+export const addStudent = () => ({
 	type: 'ADD_STUDENT',
-	student
+	formName: 'new-student'
 });
 
 export const deleteStudent = id => ({

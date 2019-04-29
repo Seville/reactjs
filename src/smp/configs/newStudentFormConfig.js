@@ -5,7 +5,8 @@ export const newStudentFormConfig = {
 	submitId: 'new-submit-student-id',
 	attrs: {
 		id: 'new-student',
-		name: 'new-student' 
+		name: 'new-student',
+		className: 'student-form'
 	},
 	controls: [
 		{ 

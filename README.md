@@ -6,6 +6,7 @@ This project was created as an exploration of react-redux implementations and fe
 
 ### Screen shots
 ** ** Table displaying a list of student records.
+![alt text](https://github.com/Seville/reactjs-smp/tree/feature/stable-crud-implementation/src/resources/images/class-table.PNG)
 
 ** ** Form for editing the record that was selected.
 

@@ -4,10 +4,12 @@ import Header from './components/Header/header';
 import StudentForm from './containers/StudentForm/studentForm'
 
 const App = () => (
-	<div>
+	<div className='smp-main'>
 		<Header />
-		<StudentGrid />
-		<StudentForm />
+		<div className='smp-form-and-grid'>
+			<StudentGrid />
+			<StudentForm />
+		</div>
 	</div>
 )
 

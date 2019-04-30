@@ -22,7 +22,7 @@ const MyForm = ({formData, selectedData}) => {
 		controlsArray.push(newControl);
 	}
 	
-	let buttonGroup = [];
+	let buttons = [];
 	if(formData['buttonGroup'] && formData['buttonGroup']['buttons'] && formData['buttonGroup']['buttons'].length > 0){
 		for(let button of formData['buttonGroup']['buttons']){
 			let newBtn;
@@ -31,11 +31,13 @@ const MyForm = ({formData, selectedData}) => {
 			} else {
 				newBtn = React.createElement(MyButton, button['attrs'], button['text']);
 			}
-			buttonGroup.push(newBtn);
+			buttons.push(newBtn);
 		}
 	}
 	
-	controlsArray.push(buttonGroup);
+	let btnGroupContainer = React.createElement('div', {...formData['buttonGroup']['attrs'], key: formData['buttonGroup']['attrs']['className']+'-1'}, buttons);
+	
+	controlsArray.push(btnGroupContainer);
 	
 	return React.createElement('form', formData['attrs'], controlsArray );
 }

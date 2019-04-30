@@ -9,5 +9,7 @@ This project was created as an exploration of react-redux implementations and fe
 ![Screenshot](https://github.com/Seville/reactjs-smp/tree/feature/stable-crud-implementation/src/resources/images/class-table.PNG)
 
 **Form for editing the record that was selected.**
+![Screenshot](https://github.com/Seville/reactjs-smp/tree/feature/stable-crud-implementation/src/resources/images/edit-record.png)
 
 **Form for adding new student the record.**
+![Screenshot](https://github.com/Seville/reactjs-smp/tree/feature/stable-crud-implementation/src/resources/images/new-record.png)

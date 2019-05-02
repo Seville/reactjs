@@ -1,12 +1,4 @@
-import { 
-	NAME_REGEX, 
-	NAME_FIELD_ERROR,
-	AGE_REGEX,
-	AGE_FIELD_ERROR,
-	GENDER_REGEX,
-    GENDER_FIELD_ERROR
-} from '../../constants/formConstants';
-
+import { NAME_REGEX, NAME_FIELD_ERROR, AGE_REGEX, AGE_FIELD_ERROR, GENDER_REGEX, GENDER_FIELD_ERROR } from '../../constants/formConstants';
 
 const isValid = (studentObj) => {
 	let errorStr = 'Please address these errors: \n';

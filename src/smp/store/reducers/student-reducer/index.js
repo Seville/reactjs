@@ -26,8 +26,6 @@ let formDataToObject = (formName) => {
 	}
 }
 
-
-
 const studentReducer = (state = initialState, action) => {
 	switch(action.type) {
 		case 'ADD_STUDENT':

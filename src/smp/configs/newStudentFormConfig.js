@@ -2,7 +2,7 @@ import { hideForm } from '../store/actions/form-display';
 import { addStudent } from '../store/actions/student-management';
 
 export const newStudentFormConfig = {
-	submitId: 'new-submit-student-id',
+	submitId: 'new-student-submit',
 	attrs: {
 		id: 'new-student',
 		name: 'new-student',

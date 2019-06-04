@@ -14,7 +14,10 @@ beforeAll(() => {
 
 test('add student to list', () => {
 	
-	let EditFormState = { formConfig: editStudentFormConfig, selectedData: editFormAction.selectedRow };
+	/*let formDataToObject = jest.fn(() => ({ stndFname: 'Joan', stndLname: 'Rivers', stndAge: 25, stndGender: 'female' }));
 	
-	expect(studentReducer(initialState, addStudent())).toEqual(EditFormState);
+	let newFormData = initialState;
+	newFormData['data'].push({ id: 5, stndFname: 'Joan', stndLname: 'Rivers', stndAge: 25, stndGender: 'female' })
+	
+	expect(studentReducer(initialState, addStudent())).toEqual(newFormData);*/
 })

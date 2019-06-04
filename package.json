@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "fstream": "1.0.12",
     "jquery": "^3.4.0",
     "object-mapper": "^5.0.0",
     "react": "^16.8.6",

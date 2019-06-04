@@ -3,6 +3,7 @@ import objectMapper from 'object-mapper';
 import SEED_DATA from '../../../seed-data/customer_info';
 import { studentFormMap } from '../../../mappers/formMapper';
 import isValid from '../../../validations/StudentValidator/studentValidator';
+import { ADD_STUDENT, DELETE_STUDENT, EDIT_STUDENT, SELECT_STUDENT } from '../../../constants/studentConstants';
 
 const initialState = SEED_DATA;
 
@@ -28,7 +29,7 @@ let formDataToObject = (formName) => {
 
 const studentReducer = (state = initialState, action) => {
 	switch(action.type) {
-		case 'ADD_STUDENT':
+		case ADD_STUDENT:
 			let dataCloneNew = [ ...state['data'] ];
 			let newFormData = formDataToObject(action.formName);
 			let largestIndex = 0;
@@ -44,9 +45,9 @@ const studentReducer = (state = initialState, action) => {
 			} else {
 				return { ...state }
 			}
-		case 'DELETE_STUDENT':
+		case DELETE_STUDENT:
 			return { ...state }
-		case 'EDIT_STUDENT':
+		case EDIT_STUDENT:
 			let dataCloneEdit = [ ...state['data'] ];
 			let updatedFormData = formDataToObject(action.formName);
 			if(updatedFormData !== null){
@@ -59,7 +60,7 @@ const studentReducer = (state = initialState, action) => {
 			} else {
 				return { ...state }
 			}
-		case 'SELECT_STUDENT':
+		case SELECT_STUDENT:
 			return { ...state }
 		default:
 			return state

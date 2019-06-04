@@ -16,5 +16,5 @@ export const NAME_FIELD_ERROR = 'The name should be a string of characters (max:
 export const AGE_REGEX = /^([0-9]){1,3}$/;
 export const AGE_FIELD_ERROR = 'The name should be a string of numbers (max: 3)';
 
-export const GENDER_REGEX = /^('male','female)$/;
+export const GENDER_REGEX = /^(male|female)$/;
 export const GENDER_FIELD_ERROR = 'The gender should be a male or female';

@@ -19,7 +19,7 @@ const isValid = (studentObj) => {
 		errorStr += GENDER_FIELD_ERROR +'\n';
 		valid = false;
 	}
-	
+
 	if(!valid){
 		window.alert(errorStr);
 	}

@@ -1,8 +1,6 @@
 import { newStudentFormConfig } from '../../../configs/newStudentFormConfig';
 import { editStudentFormConfig } from '../../../configs/editStudentFormConfig';
-import { SHOW_EDIT_FORM } from '../../../constants/formConstants';
-import { SHOW_NEW_FORM } from '../../../constants/formConstants';
-import { HIDE_FORM } from '../../../constants/formConstants';
+import { SHOW_EDIT_FORM, SHOW_NEW_FORM, HIDE_FORM  } from '../../../constants/formConstants';
 
 const initialState = {
 	formConfig: null,

@@ -61,20 +61,18 @@ export const newStudentFormConfig = {
 		},
 		buttons: [
 			{
-				
 				attrs: {
-					key: 'new-btn-01',
 					id: 'new-btn-01',
+					key: 'new-btn-01',
 					textVal: 'Add New Student',
 					callBack: addStudent,
 					callBackProp: null
 				}
 			},
 			{
-				text: 'Cancel',
 				attrs: {
-					key: 'new-btn-02',
 					id: 'new-btn-02',
+					key: 'new-btn-02',
 					textVal: 'Cancel',
 					callBack: hideForm
 				}

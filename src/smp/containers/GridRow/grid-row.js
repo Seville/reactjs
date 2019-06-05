@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { showEditForm } from '../../store/actions/form-display';
+import { showEditForm } from '../../store/actions/form-display-actions';
 
 const GridRow = ({dispatch, rowData}) => (
 	<tr key={rowData['id']} onClick={() => dispatch(showEditForm(rowData))}>

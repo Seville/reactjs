@@ -1,31 +1,8 @@
-import jQ from 'jquery';
-import objectMapper from 'object-mapper';
 import SEED_DATA from '../../../seed-data/customer_info';
-import { studentFormMap } from '../../../mappers/formMapper';
-import isValid from '../../../validations/StudentValidator/studentValidator';
-import { ADD_STUDENT, DELETE_STUDENT, EDIT_STUDENT, SELECT_STUDENT } from '../../../constants/studentConstants';
+import { formDataToObject } from '../../../helpers/student-helper';
+import { ADD_STUDENT, DELETE_STUDENT, EDIT_STUDENT, SELECT_STUDENT } from '../../../constants/student-constants';
 
 const initialState = SEED_DATA;
-
-let formDataToObject = (formName) => {
-	let formData = {};
-	let formSerialize = jQ(`#${formName}`).serialize();
-	let formList = formSerialize.split('&');
-	for(let input of formList){
-		let formEntity = input.split('=');
-		if(formEntity[1] !== ''){
-			formData[formEntity[0]] = formEntity[1];
-		}
-	}
-	
-	let mappedObject = objectMapper(formData, studentFormMap);
-	
-	if(isValid(mappedObject)){
-		return mappedObject;
-	} else {
-		return null;
-	}
-}
 
 const studentReducer = (state = initialState, action) => {
 	switch(action.type) {

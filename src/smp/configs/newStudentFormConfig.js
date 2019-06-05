@@ -1,5 +1,5 @@
-import { hideForm } from '../store/actions/form-display';
-import { addStudent } from '../store/actions/student-management';
+import { hideForm } from '../store/actions/form-display-actions';
+import { addStudent } from '../store/actions/student-actions';
 
 export const newStudentFormConfig = {
 	submitId: 'new-student-submit',

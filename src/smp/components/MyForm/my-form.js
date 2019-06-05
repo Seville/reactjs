@@ -1,5 +1,5 @@
 import React from 'react';
-import MyButton from '../../containers/MyButton/myButton';
+import MyButton from '../../containers/MyButton/my-button';
 
 const MyForm = ({formData, selectedData}) => {
 	if(formData === null){

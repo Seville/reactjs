@@ -1,5 +1,5 @@
-import { hideForm } from '../store/actions/form-display';
-import { editStudent } from '../store/actions/student-management';
+import { hideForm } from '../store/actions/form-display-actions';
+import { editStudent } from '../store/actions/student-actions';
 
 export const editStudentFormConfig = {
 	submitId: 'edit-student-submit',

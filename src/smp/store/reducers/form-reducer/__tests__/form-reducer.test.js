@@ -1,9 +1,11 @@
-import formReducer from './index.js'
-import { newStudentFormConfig } from '../../../configs/newStudentFormConfig';
-import { editStudentFormConfig } from '../../../configs/editStudentFormConfig';
-import { SHOW_EDIT_FORM, SHOW_NEW_FORM, HIDE_FORM  } from '../../../constants/formConstants';
+import formReducer from '../index.js'
+import { newStudentFormConfig } from '../../../../configs/newStudentFormConfig';
+import { editStudentFormConfig } from '../../../../configs/editStudentFormConfig';
+import { SHOW_EDIT_FORM, SHOW_NEW_FORM, HIDE_FORM } from '../../../../constants/form-constants';
 
 let initialState;
+
+jest.mock('../index');
 
 beforeAll(() => {
 	initialState = {
@@ -17,6 +19,13 @@ test('return edit-form config', () => {
 		type: SHOW_EDIT_FORM,
 		selectedRow: { id: 1, stndAge: 21, stndFname: 'John', stndLname: 'Smith', stndGender: 'male' }
 	}
+	
+	formReducer.mockImplementation((initialState, editFormAction) => (
+		{ formConfig: editStudentFormConfig, selectedData: editFormAction.selectedRow }
+	));
+	
+	
+	formReducer({formConfig: 'config', selectedData: 'ok'},{type: 'edit', selectedRow: 'row'});
 	
 	let EditFormState = { formConfig: editStudentFormConfig, selectedData: editFormAction.selectedRow };
 	

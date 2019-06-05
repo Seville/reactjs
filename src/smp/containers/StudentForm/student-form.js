@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import MyForm from '../../components/MyForm/myForm'
+import MyForm from '../../components/MyForm/my-form'
 
 const mapStateToProps = state => ({
 	formData: state.formReducer.formConfig,

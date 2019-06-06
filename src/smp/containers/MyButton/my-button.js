@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const MyButton = ({dispatch, ...props}) => (
+const MyButton = ({dispatch, callback, callbackprop, ...props}) => (
 	<button { ...props } onClick={(evt) => { 
 		evt.preventDefault();
-		dispatch(props.callBack(props.callBackProp))
-	}}>{props.textVal}</button>
+		dispatch(callback(callbackprop || null))
+	}}>{props.textval}</button>
 )
 
 export default connect()(MyButton);

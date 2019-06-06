@@ -1,24 +1,23 @@
+import * as types from '../../../constants/student-constants';
+import * as formConstants from '../../../constants/form-constants';
+
 export const addStudent = () => ({
-	type: 'ADD_STUDENT',
-	formName: 'new-student'
+	type: types.ADD_STUDENT,
+	formName: formConstants.NEW_STUDENT_FORMNAME
 });
 
 export const deleteStudent = id => ({
-	type: 'DELETE_STUDENT',
+	type: types.DELETE_STUDENT,
 	id
 });
 
 export const editStudent = (id) => ({
-	type: 'EDIT_STUDENT',
-	formName: 'edit-student',
+	type: types.EDIT_STUDENT,
+	formName: formConstants.EDIT_STUDENT_FORMNAME,
 	id
 });
 
 export const selectStudent = student => ({
-	type: 'SELECT_STUDENT',
+	type: types.SELECT_STUDENT,
 	student
-});
-
-export const showAllStudents = () => ({
-	type: 'SHOW_ALL_STUDENTS'
 });

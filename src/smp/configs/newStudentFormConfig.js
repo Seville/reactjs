@@ -64,17 +64,17 @@ export const newStudentFormConfig = {
 				attrs: {
 					id: 'new-btn-01',
 					key: 'new-btn-01',
-					textVal: 'Add New Student',
-					callBack: addStudent,
-					callBackProp: null
+					textval: 'Add New Student',
+					callback: addStudent,
+					callbackprop: null
 				}
 			},
 			{
 				attrs: {
 					id: 'new-btn-02',
 					key: 'new-btn-02',
-					textVal: 'Cancel',
-					callBack: hideForm
+					textval: 'Cancel',
+					callback: hideForm
 				}
 			}
 		]

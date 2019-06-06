@@ -5,7 +5,7 @@ import { showNewForm } from '../../store/actions/form-display-actions';
 
 const Header = ({dispatch}) => (
 	<nav>
-		<MyButton textVal="New Student" callBack={showNewForm}/>
+		<MyButton textval="New Student" callback={showNewForm} />
 	</nav>
 )
 

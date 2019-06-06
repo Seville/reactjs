@@ -64,9 +64,9 @@ export const editStudentFormConfig = {
 				attrs: {
 					key: 'edit-btn-01',
 					id: 'edit-btn-01',
-					textVal: 'Edit Student',
-					callBack: editStudent,
-					callBackProp: null
+					textval: 'Edit Student',
+					callback: editStudent,
+					callbackprop: null
 				}
 			},
 			{
@@ -74,8 +74,8 @@ export const editStudentFormConfig = {
 				attrs: {
 					key: 'edit-btn-02',
 					id: 'edit-btn-02',
-					textVal: 'Cancel',
-					callBack: hideForm
+					textval: 'Cancel',
+					callback: hideForm
 				}
 			}
 		]

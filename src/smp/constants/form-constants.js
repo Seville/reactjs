@@ -6,8 +6,8 @@ export const SHOW_NEW_FORM = 'SHOW_NEW_FORM';
 export const HIDE_FORM = 'HIDE_FORM';
 
 // Form names
-export const STUDENT_EDIT_FORM = 'student-edit-form';
-export const STUDENT_NEW_FORM = 'student-new-form';
+export const NEW_STUDENT_FORMNAME = 'new-student';
+export const EDIT_STUDENT_FORMNAME = 'edit-student';
 
 // Form field regex and error messages
 export const NAME_REGEX = /^([a-zA-Z]){1,20}$/;

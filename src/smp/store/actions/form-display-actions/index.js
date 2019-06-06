@@ -1,12 +1,14 @@
+import * as types from '../../../constants/form-constants';
+
 export const showEditForm = (selectedRow) => ({
-	type: 'SHOW_EDIT_FORM',
+	type: types.SHOW_EDIT_FORM,
 	selectedRow
 });
 
 export const showNewForm = () => ({
-	type: 'SHOW_NEW_FORM'
+	type: types.SHOW_NEW_FORM
 });
 
 export const hideForm = () => ({
-	type: 'HIDE_FORM'
+	type: types.HIDE_FORM
 });

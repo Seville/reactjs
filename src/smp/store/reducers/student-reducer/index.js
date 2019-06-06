@@ -18,12 +18,11 @@ const studentReducer = (state = initialState, action) => {
 			if(newFormData !== null){
 				newFormData['id'] = largestIndex + 1;
 				dataCloneNew.push(newFormData);
+				debugger;
 				return { ...state, data: dataCloneNew };
 			} else {
 				return { ...state }
 			}
-		case DELETE_STUDENT:
-			return { ...state }
 		case EDIT_STUDENT:
 			let dataCloneEdit = [ ...state['data'] ];
 			let updatedFormData = formDataToObject(action.formName);
@@ -37,6 +36,8 @@ const studentReducer = (state = initialState, action) => {
 			} else {
 				return { ...state }
 			}
+		case DELETE_STUDENT:
+			return { ...state }
 		case SELECT_STUDENT:
 			return { ...state }
 		default:

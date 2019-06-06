@@ -16,7 +16,7 @@ export let formDataToObject = (formName) => {
 	
 	let mappedObject = objectMapper(formData, studentFormMap);
 	
-	if(isValid(mappedObject)){
+	if(Object.entries(mappedObject).length > 0 && isValid(mappedObject)){
 		return mappedObject;
 	} else {
 		return null;

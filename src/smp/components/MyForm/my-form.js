@@ -1,5 +1,5 @@
 import React from 'react';
-import MyButton from '../../containers/MyButton/myButton';
+import MyButton from '../../containers/MyButton/my-button';
 
 const MyForm = ({formData, selectedData}) => {
 	if(formData === null){
@@ -27,7 +27,7 @@ const MyForm = ({formData, selectedData}) => {
 		for(let button of formData['buttonGroup']['buttons']){
 			let newBtn;
 			if(selectedData && selectedData['id'] && selectedData['id'] !== null && selectedData['id'] !== ''){
-				newBtn = React.createElement(MyButton, {...button['attrs'], callBackProp: selectedData['id']}, button['text']);
+				newBtn = React.createElement(MyButton, {...button['attrs'], callbackprop: selectedData['id']}, button['text']);
 			} else {
 				newBtn = React.createElement(MyButton, button['attrs'], button['text']);
 			}

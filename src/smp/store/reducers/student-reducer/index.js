@@ -1,12 +1,25 @@
-import SEED_DATA from '../../../seed-data/customer_info';
+import SEED_DATA from '../../../seed-data/student_grid_info';
 import { formDataToObject } from '../../../helpers/student-helper';
-import { ADD_STUDENT, DELETE_STUDENT, EDIT_STUDENT, SELECT_STUDENT } from '../../../constants/student-constants';
+import * as studentConstants from '../../../constants/student-constants';
 
 const initialState = SEED_DATA;
+/*
+const initialState = {
+	gridData: null,
+	loading: false,
+	error: null
+}
+*/
 
 const studentReducer = (state = initialState, action) => {
 	switch(action.type) {
-		case ADD_STUDENT:
+		case studentConstants.CONNECT_TO_API:
+			return { ...state }
+		case studentConstants.GET_STUDENT_DATA_SUCCESS:
+			return { ...state }
+		case studentConstants.GET_STUDENT_DATA_FAILURE:
+			return { ...state }
+		case studentConstants.ADD_STUDENT:
 			let dataCloneNew = [ ...state['data'] ];
 			let newFormData = formDataToObject(action.formName);
 			let largestIndex = 0;
@@ -23,7 +36,7 @@ const studentReducer = (state = initialState, action) => {
 			} else {
 				return { ...state }
 			}
-		case EDIT_STUDENT:
+		case studentConstants.EDIT_STUDENT:
 			let dataCloneEdit = [ ...state['data'] ];
 			let updatedFormData = formDataToObject(action.formName);
 			if(updatedFormData !== null){
@@ -36,9 +49,9 @@ const studentReducer = (state = initialState, action) => {
 			} else {
 				return { ...state }
 			}
-		case DELETE_STUDENT:
+		case studentConstants.DELETE_STUDENT:
 			return { ...state }
-		case SELECT_STUDENT:
+		case studentConstants.SELECT_STUDENT:
 			return { ...state }
 		default:
 			return state

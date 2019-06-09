@@ -1,8 +1,8 @@
-import { hideForm } from '../store/actions/form-display';
-import { addStudent } from '../store/actions/student-management';
+import { hideForm } from '../store/actions/form-display-actions';
+import { addStudent } from '../store/actions/student-actions';
 
 export const newStudentFormConfig = {
-	submitId: 'new-submit-student-id',
+	submitId: 'new-student-submit',
 	attrs: {
 		id: 'new-student',
 		name: 'new-student',
@@ -61,22 +61,20 @@ export const newStudentFormConfig = {
 		},
 		buttons: [
 			{
-				
 				attrs: {
-					key: 'new-btn-01',
 					id: 'new-btn-01',
-					textVal: 'Add New Student',
-					callBack: addStudent,
-					callBackProp: null
+					key: 'new-btn-01',
+					textval: 'Add New Student',
+					callback: addStudent,
+					callbackprop: null
 				}
 			},
 			{
-				text: 'Cancel',
 				attrs: {
-					key: 'new-btn-02',
 					id: 'new-btn-02',
-					textVal: 'Cancel',
-					callBack: hideForm
+					key: 'new-btn-02',
+					textval: 'Cancel',
+					callback: hideForm
 				}
 			}
 		]

@@ -1,4 +1,4 @@
-import { NAME_REGEX, NAME_FIELD_ERROR, AGE_REGEX, AGE_FIELD_ERROR, GENDER_REGEX, GENDER_FIELD_ERROR } from '../../constants/formConstants';
+import { NAME_REGEX, NAME_FIELD_ERROR, AGE_REGEX, AGE_FIELD_ERROR, GENDER_REGEX, GENDER_FIELD_ERROR } from '../../constants/form-constants';
 
 const isValid = (studentObj) => {
 	let errorStr = 'Please address these errors: \n';
@@ -19,7 +19,7 @@ const isValid = (studentObj) => {
 		errorStr += GENDER_FIELD_ERROR +'\n';
 		valid = false;
 	}
-	
+
 	if(!valid){
 		window.alert(errorStr);
 	}

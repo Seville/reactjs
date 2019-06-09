@@ -1,8 +1,6 @@
 import { newStudentFormConfig } from '../../../configs/newStudentFormConfig';
 import { editStudentFormConfig } from '../../../configs/editStudentFormConfig';
-import { SHOW_EDIT_FORM } from '../../../constants/formConstants';
-import { SHOW_NEW_FORM } from '../../../constants/formConstants';
-import { HIDE_FORM } from '../../../constants/formConstants';
+import * as types from '../../../constants/form-constants';
 
 const initialState = {
 	formConfig: null,
@@ -15,15 +13,15 @@ const isEqual = (a, b) => (
 
 const formReducer = (state = initialState, action) => {
 	switch(action.type) {
-		case SHOW_EDIT_FORM:
+		case types.SHOW_EDIT_FORM:
 			if(isEqual(state.formConfig, editStudentFormConfig)){
 				return { ...state, selectedData: action.selectedRow }
 			} else {
 				return {...state, formConfig: editStudentFormConfig, selectedData: action.selectedRow }
 			}
-		case SHOW_NEW_FORM:
+		case types.SHOW_NEW_FORM:
 			return { ...state, formConfig: newStudentFormConfig, selectedData: action.selectedRow }
-		case HIDE_FORM:
+		case types.HIDE_FORM:
 			return initialState;
 		default:
 			return state

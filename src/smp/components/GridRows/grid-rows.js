@@ -1,5 +1,5 @@
 import React from 'react'
-import GridRow from '../../containers/GridRow/gridRow';
+import GridRow from '../../containers/GridRow/grid-row';
 
 const GridRows = ({rows}) => 
 	rows.map(row => 

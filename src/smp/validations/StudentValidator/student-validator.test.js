@@ -1,4 +1,4 @@
-import isValid from './studentValidator'
+import isValid from './student-validator'
 
 test('student name to be valid', () => {
 	let studentObj = {};

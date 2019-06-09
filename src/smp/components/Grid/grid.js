@@ -1,6 +1,6 @@
 import React from 'react';
-import GridHeaders from '../GridHeaders/gridHeaders';
-import GridRows from '../GridRows/gridRows';
+import GridHeaders from '../GridHeaders/grid-headers';
+import GridRows from '../GridRows/grid-rows';
 
 const Grid = ({gridHeaders, gridRows}) => (
 	<table>
